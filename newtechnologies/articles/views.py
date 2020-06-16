@@ -35,7 +35,6 @@ class DetailView(generic.DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-
 #def detail(request, question_id):
     # question = get_object_or_404(Question, pk=question_id)
 #    try:
@@ -47,6 +46,7 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'articles/results.html'
+
 
 #def results(request, question_id):
 #    question = get_object_or_404(Question, pk=question_id)
